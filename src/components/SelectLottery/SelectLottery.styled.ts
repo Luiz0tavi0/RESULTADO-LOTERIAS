@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 const SelectStyled = styled.select`
-  width: 150px;
+  width: 10rem;
   font-size: 14px;
   color: #333;
 
