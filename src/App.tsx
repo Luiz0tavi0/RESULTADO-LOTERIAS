@@ -1,28 +1,27 @@
+
 import Ball from './components/Ball';
-import GameContainer from './components/GameContainer';
+import LotteryContainer from './components/LotteryContainer';
+import LotteryResultsContainer from './components/LotteryResultsContainer';
 import MainSection from './components/MainContainer';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 
 function App() {
 
-
   return (
     <MainSection>
       <ThemeProvider>
-        <GameContainer>
-          {"aqui fica os jogos"}
-        </GameContainer>
+        <LotteryContainer />
       </ThemeProvider>
-      <div>
-        <Ball number='1' />
-        <Ball number='2' />
-        <Ball number='3' />
-        <Ball number='4' />
-      </div>
-
+      <LotteryResultsContainer>
+        {
+          Array.from({ length: 7 }, (_, index) => (
+            <Ball key={index} number={`${index + 1}`} />
+          ))
+        }
+      </LotteryResultsContainer>
     </MainSection>
   )
 }
 
-export default App
+export default App;

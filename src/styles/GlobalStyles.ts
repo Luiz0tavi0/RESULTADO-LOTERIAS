@@ -1,15 +1,24 @@
 import { createGlobalStyle } from "styled-components";
+// import 'reset-css/reset.css'; // Importando o reset-css
 
 const GlobalStyle = createGlobalStyle`
-*{
-    margin: 0;
-    padding: 0;
-    outline:0;
-    box-sizing:border-box;
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+  #root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* width: 100%;
+      height: 100%; */
+  }
+  html, body {
     font-family: 'Montserrat', sans-serif;
-}
-#root{
-    margin:0 auto;
-}
-`
+      /* width: 100%;
+      height: 100%; */
+      
+  }
+
+
+`;
+
 export default GlobalStyle;

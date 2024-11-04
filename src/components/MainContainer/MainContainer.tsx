@@ -1,10 +1,11 @@
 //src/components/MainSection.tsx
-import MainContainerStyled from './MainContainer.styled';
+
 import { MainSectionProps } from './MainContainer.types';
+import MainContainerStyled from './MainContainer.styled';
 
 const MainContainer = ({ children }: MainSectionProps) => {
   return (
-    <MainContainerStyled>
+    <MainContainerStyled id='main-container'>
       {children}
     </MainContainerStyled>
   );

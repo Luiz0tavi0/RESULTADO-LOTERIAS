@@ -1,7 +1,7 @@
 // src/context/ThemeContext.tsx
 import { createContext, ReactNode, useState, useMemo, useCallback } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-import themes, { GameType } from './../styles/themes';
+import themes, { GameType } from '../styles/themes';
 
 interface ThemeContextProps {
   themeType: GameType;
